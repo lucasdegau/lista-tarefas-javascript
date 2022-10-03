@@ -14,13 +14,26 @@ function limpaInput(){
 
 function criaBotaoApagar(li) {
     li.innerText += ' ';
-    const botaoApagar = document.createElement('button')
-    botaoApagar.innerText = 'Apagar';
+    const botaoApagar = document.createElement('button');
+    const botaoCheck = document.createElement('button');
+    //botaoApagar.innerText = 'Apagar';
+    botaoCheck.setAttribute('class', 'check');
+    botaoCheck.setAttribute('title', 'Tarefa Concluída');
     botaoApagar.setAttribute('class', 'apagar');
     botaoApagar.setAttribute('title', 'Apagar esta tarefa');
 
     li.appendChild(botaoApagar);
+    li.appendChild(botaoCheck);
 }
+
+document.addEventListener('click', function(e) {
+    const el = e.target;
+
+    if (el.classList.contains('check')) {
+        el.parentElement.style.background = ('#95F594');
+        salvarTarefas();
+    }
+});
 
 inputTarefa.addEventListener('keypress', function(e) {
     if (e.keyCode === 13) {

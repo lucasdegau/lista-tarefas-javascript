@@ -12,7 +12,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: var(--primary-color);
+  background-image:url("../img/bg.svg");
+  background-size: cover;
   font-family: 'Open sans', sans-serif;
   font-size: 1.3em;
   line-height: 1.5em;
@@ -25,6 +26,32 @@ body {
   padding: 20px;
   border-radius: 10px;
 }
+
+.apagar {
+  display: inline-flex;
+  background-image: url("https://www.pngall.com/wp-content/uploads/5/Delete-Bin-Trash-PNG-Clipart.png") ;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin-right: 5px;
+}
+
+.check {
+  display: inline-flex;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/4315/4315445.png") ;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+
 
 form input, form label, form button {
   display: block;
